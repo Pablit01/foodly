@@ -1,0 +1,66 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    align-items: center;
+    width: 800px;
+}
+
+.formContainer button{
+    display: block;
+}
+
+#hrr{
+    height: 250px;
+    border: solid black;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.logo{
+    background-image: url('https://startup.network/upload/iblock/4b3/foodly_logo_dark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+}
+
+.signing input{
+    width: 300px;
+    height: 50px;
+    border: solid black 3px;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    padding: 0 0 0 20px;
+    font-family: cursive;
+    font-size: large;
+}
+
+.signing button.send{
+    width: 300px;
+    height: 50px;
+    color: orange;
+    background-color: black;
+    border: solid black 3px;
+    border-radius: 5px;
+    font-size: large;
+    font-family: cursive;
+}
+
+.signing .register{
+    width: 300px;
+    font-size: large;
+    font-family: cursive;
+    display: block;
+    margin: 10px 0 0 10;
+    text-decoration: none;
+    color: inherit;
+}
+
+.signing .google{
+    width: 300px;
+    font-size: large;
+    font-family: cursive;
+    transform: translateX(50px);
+    margin: 10px 0 0 0;
+}
