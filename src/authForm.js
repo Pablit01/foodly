@@ -1,21 +1,7 @@
 import style1 from './styles/loginRegisterStyles.css';
 import style2 from './styles/registerStyles.css';
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup , createUserWithEmailAndPassword, signOut } from 'firebase/auth';
-
-// document.addEventListener('DOMContentLoaded', () => {
-
-//   let bodyId = document.body.id;
-
-//   console.log('xxd!', bodyId)
-
-//   if(bodyId === 'afterLogin'){
-//     console.log('Jestes na afterLogin')
-//   }else if(bodyId === 'index'){
-//     console.log('Jesteś na index.html')
-//   }
-
-// })
+import { getAuth, GoogleAuthProvider, signInWithPopup , createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword } from 'firebase/auth';
 
 class AuthForm {
   constructor(){
@@ -42,7 +28,7 @@ class AuthForm {
   signWithPopup(){
     this.google.addEventListener('click', (e) => {
       e.preventDefault();
-    
+      
      signInWithPopup(this.auth, this.provider)
       .then( (result) => {
         console.log(`${result.user.displayName} is logged in via google account`);
@@ -51,6 +37,19 @@ class AuthForm {
           console.log(err.message, err);
       });
     
+    });
+  };
+
+  signIn(){
+    this.connect = document.querySelector(".signing");
+    this.connect.addEventListener('submit', (e) => {
+      e.preventDefault();
+      signInWithEmailAndPassword(this.auth, this.connect.email.value, this.connect.password.value)
+      .then( user => {
+        console.log(`Logged as ${user.user}`);
+        window.location.assign('./afterLogin.html');
+      })
+      .catch( err => console.log(err.message));
     });
   };
 
@@ -92,6 +91,7 @@ class AuthForm {
           this.signWithPopup();
           this.register1Event();
           this.signOut();
+          this.signIn();
           break;
         case 'register':
           this.creatingUser();

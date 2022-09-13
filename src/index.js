@@ -1,1 +1,2 @@
-import './authForm'
+import './authForm';
+import './afterLogin.js'
