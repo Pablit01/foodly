@@ -6,6 +6,7 @@
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "firebase": "^9.9.4",
+    "source-map-loader": "^4.0.0",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.74.0",
@@ -104,5 +105,14 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablit01/foodly.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Pablit01/foodly/issues"
+  },
+  "homepage": "https://github.com/Pablit01/foodly#readme",
   "description": ""
 }

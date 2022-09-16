@@ -17,6 +17,12 @@ module.exports = {
     module: {
         rules: [
           {
+            test: /\.js$/,
+            enforce: 'pre',
+            use: ['source-map-loader'],
+          },
+          
+          {
             test: /\.m?js$/,
             exclude: /(node_modules|bower_components)/,
             use: {
