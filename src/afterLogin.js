@@ -1,4 +1,5 @@
 import style3 from './styles/afterLogin.css';
+import './zaczekMonday.js'
 
 class AfterLogin{
     constructor(){
